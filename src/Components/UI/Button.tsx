@@ -1,16 +1,15 @@
 import React from 'react';
-
+import cls from './Button.module.scss'
 interface ButtonProps {
     children:string,
     category:string,
-    handleClickFunction:()=>void
 }
 
-const Button: React.FC<ButtonProps> = () => {
+const Button: React.FC<ButtonProps> = ({children,category}) => {
     return (
-        <div>
-            
-        </div>
+        <button className={category==='buy'?cls.button_buy:category==='registry'?cls.button_registry:category==='form'?cls.button_form:cls.button}>
+            {children}
+        </button>
     );
 };
 

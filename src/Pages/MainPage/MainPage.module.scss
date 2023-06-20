@@ -1,7 +1,97 @@
-.catalog_new{
+.main_page {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Catalog block*/
+.catalog_new {
+    padding-left: 40px;
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-gap: 10px; 
-    border-bottom: 1px solid lightgray;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+
     padding-bottom: 20px;
+}
+
+
+/*Registry block*/
+.registry {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 70vh;
+    background: url(../../assets/korean.jpg);
+    padding-left: 40px;
+}
+
+.text_info {
+    width: 50%;
+    text-align: start;
+    line-height: 120%;
+    font-size: 14pt;
+}
+
+.text_info,
+.title,
+.subtitle {
+    padding-left: 10px;
+
+}
+
+.subtitle {
+    font-size: 18pt;
+}
+
+.line {
+    height: 1vh;
+    width: 100%;
+    background: linear-gradient(90deg, #aea4e3, #d3ffe8);
+}
+
+.line2 {
+    height: 1vh;
+    width: 100%;
+    background: linear-gradient(90deg, #d3ffe8, #aea4e3);
+}
+
+.info_title {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14pt;
+    z-index: 1;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    height: 40vh;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.how_to_order,
+.delivery_from_korea,
+.delivery_in_russia {
+    text-align: center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+.korean_img{
+    position: absolute;
+    z-index: 0;
+    opacity: 30%;
+    width: 150px;
+    margin-left: 10%;
+}
+
+.info_body {
+    padding-top: 10%;
+    z-index: 1;
 }
