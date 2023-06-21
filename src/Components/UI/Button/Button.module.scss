@@ -1,0 +1,36 @@
+.button_registry{
+    background-color: rgb(88, 136, 16);
+    color: white;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    font-size: 20pt;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    transition: ease-in-out 0.3s;
+}
+.button_registry:hover{
+   background-color: rgb(143, 3, 3);
+}
+.button_registry:active{
+    background-color: rgb(88, 136, 16);
+}
+.button_form{
+    background-color: rgb(26, 159, 183);
+    color: white;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    font-size: 20pt;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    transition: ease-in-out 0.3s;
+}
+.button_form:hover{
+    background-color: rgb(143, 3, 3);
+ }
+ .button_form:active{
+    background-color: rgb(26, 159, 183);
+ }

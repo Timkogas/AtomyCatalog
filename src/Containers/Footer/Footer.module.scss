@@ -1,0 +1,22 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+    margin-bottom: 20px;
+}
+.questions{
+    font-size: 14pt;
+    letter-spacing: 1px;
+}
+.wattsapp{
+    color: rgb(37, 171, 37);
+    cursor: pointer;
+    font-size: 18pt;
+}
+.telegram{
+    color:rgb(46, 46, 178);
+    cursor: pointer;
+    font-size: 18pt;
+}
