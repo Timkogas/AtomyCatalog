@@ -1,3 +1,22 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+
+
 .main_page {
     display: flex;
     flex-direction: column;
@@ -12,6 +31,23 @@
     justify-items: center;
     grid-gap: 12px;
     padding-bottom: 100px;
+
+    @include _1300 {
+       
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 12px;
+        padding-bottom: 20px;
+    }
+    @include _883{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 12px;
+        padding-bottom: 20px;
+    }
+   
 }
 
 
@@ -22,9 +58,14 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    height: 70vh;
+    height: 80vh;
     background: url(../../assets/korean.jpg);
     padding-left: 40px;
+    @include _500{
+        background: url(../../assets/korrr.png);
+        align-items: center;
+        padding-left: 0px;
+    }
 }
 
 .text_info {
@@ -32,17 +73,27 @@
     text-align: start;
     line-height: 120%;
     font-size: 14pt;
+    @include _500(){
+        width: 90%;
+        text-align: center;
+    }
 }
 
 .text_info,
 .title,
 .subtitle {
     padding-left: 10px;
+    @include _500(){
+        padding-left: 0;
+    }
 
 }
 
 .subtitle {
     font-size: 18pt;
+    @include _500{
+        text-align: center;
+    }
 }
 
 .line {
@@ -65,6 +116,7 @@
     height: 40vh;
     padding-left: 20px;
     padding-right: 20px;
+    justify-items: center;
 
     &_title {
         text-transform: uppercase;
@@ -78,6 +130,13 @@
         padding-top: 10%;
         z-index: 1;
     }
+    @include _883(){
+        flex-direction: column;
+        height: 70vh;
+    }
+    @include _500(){
+        height: 85vh;
+    }
 }
 
 .how_to_order,
@@ -87,6 +146,14 @@
     width: 60%;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    @include _883{
+        margin:20px;
+    }
+    @include _500(){
+        margin: 10px;
+    }
 }
 
 .korean_img {
@@ -95,16 +162,4 @@
     opacity: 10%;
     width: 150px;
     align-self: center;
-}
-
-
-@media screen and (max-width:1200px) {
-    .catalog_new {
-        padding-left: 40px;
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
-        padding-bottom: 20px;
-    }
 }
