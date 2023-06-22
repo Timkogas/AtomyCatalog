@@ -1,7 +1,7 @@
 import React from 'react';
 import cls from './MainPage.module.scss'
 import { useAppSelector } from '../../Redux/Redux-hooks/hooks';
-import ProductContainer from '../../Containers/ProductContainer/ProductContainer';
+import ProductContainer from '../../Components/ProductContainer/ProductContainer';
 import Button from '../../Components/UI/Button/Button';
 import koreanImg from '../../assets/korean_symbol.png'
 interface MainPageProps {

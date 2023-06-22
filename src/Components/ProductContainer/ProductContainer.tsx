@@ -16,7 +16,7 @@ const ProductContainer: React.FC<ProductContainerProps> = ({name,korean,price,no
                 <img className={cls.rly_image} src={placehold} alt="" />
             </div>
             <div className={cls.info}>
-            <span className={cls.price}>{price}</span>
+            <span className={cls.price}>{price} р</span>
             <span className={cls.name}>{name}</span>
             <span className={cls.note}>{note}</span>
             </div>

@@ -5,12 +5,13 @@
 
 /*Catalog block*/
 .catalog_new {
-    padding-left: 40px;
+    
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    padding-bottom: 20px;
+    justify-items: center;
+    grid-gap: 12px;
+    padding-bottom: 100px;
 }
 
 
@@ -56,13 +57,7 @@
     background: linear-gradient(90deg, #d3ffe8, #aea4e3);
 }
 
-.info_title {
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 14pt;
-    z-index: 1;
-}
+
 
 .info {
     display: flex;
@@ -70,6 +65,19 @@
     height: 40vh;
     padding-left: 20px;
     padding-right: 20px;
+
+    &_title {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 14pt;
+        z-index: 1;
+    }
+
+    &_body {
+        padding-top: 10%;
+        z-index: 1;
+    }
 }
 
 .how_to_order,
@@ -79,24 +87,19 @@
     width: 60%;
     display: flex;
     flex-direction: column;
-   
-
 }
-.korean_img{
+
+.korean_img {
     position: absolute;
     z-index: 0;
-    opacity: 30%;
+    opacity: 10%;
     width: 150px;
-    margin-left: 10%;
+    align-self: center;
 }
 
-.info_body {
-    padding-top: 10%;
-    z-index: 1;
-}
 
 @media screen and (max-width:1200px) {
-    .catalog_new{
+    .catalog_new {
         padding-left: 40px;
         margin-top: 30px;
         display: grid;

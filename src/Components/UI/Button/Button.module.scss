@@ -8,7 +8,8 @@
     outline: none;
     border: none;
     border-radius: 12px;
-    transition: ease-in-out 0.3s;
+    transition: ease-in-out 0.3s; 
+    cursor: pointer;
 }
 .button_registry:hover{
    background-color: rgb(143, 3, 3);
@@ -20,16 +21,17 @@
     background-color: rgb(26, 159, 183);
     color: white;
     letter-spacing: 1px;
-    padding: 10px 30px;
-    font-size: 20pt;
+    padding: 9px 10px;
+    font-size: 12pt;
     overflow: hidden;
     outline: none;
     border: none;
-    border-radius: 12px;
+    border-radius: 0px 12px 12px 0px ;
     transition: ease-in-out 0.3s;
+    cursor: pointer;
 }
 .button_form:hover{
-    background-color: rgb(143, 3, 3);
+    background-color: rgb(23, 125, 143);
  }
  .button_form:active{
     background-color: rgb(26, 159, 183);
