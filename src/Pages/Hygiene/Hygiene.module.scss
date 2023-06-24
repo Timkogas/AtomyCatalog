@@ -1,0 +1,63 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+
+
+
+
+.hygiene {
+    display: flex;
+    flex-direction: column;
+
+    &_title {
+        align-self: center;
+        font-size: 14pt;
+        text-align: center;
+        width: 90%;
+        padding: 10px;
+        color: white;
+        background-color: rgb(26, 159, 183);
+        margin-top: 20px;
+        border-radius: 12px;
+        border: 2px solid rgb(157, 196, 203);
+    }
+
+    &_container {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        grid-gap: 12px;
+        padding-bottom: 100px;
+
+        @include _1300 {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 12px;
+            padding-bottom: 20px;
+        }
+
+        @include _883 {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 12px;
+            padding-bottom: 20px;
+        }
+    }
+}

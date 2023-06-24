@@ -1,0 +1,100 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+
+.contacts{
+    background: #000000;  
+    background: -webkit-linear-gradient(to right, #434343, #000000);  
+    background: linear-gradient(to right, #434343, #000000); 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18pt;
+    &_info{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14pt;
+        width: 70%;
+        text-align: center;
+        height: 15vh;
+        justify-content: space-around;
+    }
+    &_image{
+        margin-top: 20px;
+    }
+    &_rlyimage{
+        border-radius: 100%;
+        width: 150px;
+        height: 150px;
+    }
+    &_title{
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    &_links{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        justify-content: space-around;
+    }
+    @include _883(){
+        .contacts{
+            font-size: 12pt;
+        }
+        @include _500{
+            .contacts_info{
+                font-size: 10pt;
+            }
+        }
+    }
+
+}
+a{
+    color: white;
+    text-decoration: none;
+   
+}
+.vk,.telegram, .wattsapp{
+    padding: 10px;
+    margin: 5px 0px;
+    width: 300px;
+    text-align: center;
+    border-radius: 12px;
+}
+.vk{
+    background-color: #0077FF;
+}
+.wattsapp{
+    background-color: #25D366;
+}
+.telegram{
+    background-color: #0088cc;
+}
+.underline{
+    height: 2px;
+    background-color: white;
+    width: 10vw;
+    margin-bottom: 10px;
+}

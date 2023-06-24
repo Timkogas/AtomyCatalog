@@ -18,43 +18,147 @@ interface ProductState {
 
 const initialState: ProductState = {
     products: [
-    { name: 'Atomy Toothpast', 
-    korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast', 
-    korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast', 
-    korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast', 
-    korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast', 
-    korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast', 
-    korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast', 
-    korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast', 
-    korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Hemohim', 
-    korean: false, new: false, price: 7000, note: '20мл x 60 саше - 1 месяц приема', category: 'БАДы и Витамины', hemohim: true },
-    { name: 'Atomy Hemohim 4SET', 
-    korean: false, new: false, price: 26000, note: '4 коробки x 60 саше x 20мл - 4 месяца приема', category: 'БАДы и Витамины', hemohim: true },
-    { name: 'Atomy Toothpast new', 
-    korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast new', 
-    korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast new', 
-    korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast new', 
-    korean: true, new: true, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast new', 
-    korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast new', 
-    korean: true, new: true, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast new', 
-    korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-    { name: 'Atomy Toothpast new', 
-    korean: true, new: true, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false },
-   ]
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Еда и напитки', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Еда и напитки', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Еда и напитки', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Еда и напитки', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: true, new: false, price: 1100, note: '200гр x 5шт', category: 'Еда и напитки', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Еда и напитки', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Товары для дома', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: true, new: false, price: 1100, note: '200гр x 5шт', category: 'Товары для дома', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Товары для дома', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: true, new: false, price: 1100, note: '200гр x 5шт', category: 'Товары для дома', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Товары для дома', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: true, new: false, price: 1100, note: '200гр x 5шт', category: 'Товары для дома', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast',
+            korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Личная гигиена', hemohim: false
+        },
+        {
+            name: 'Atomy Hemohim',
+            korean: false, new: false, price: 7000, note: '20мл x 60 саше - 1 месяц приема', category: 'БАДы и Витамины', hemohim: true
+        },
+        {
+            name: 'Atomy Hemohim 4SET',
+            korean: false, new: false, price: 26000, note: '4 коробки x 60 саше x 20мл - 4 месяца приема', category: 'БАДы и Витамины', hemohim: true
+        },
+        {
+            name: 'Atomy Toothpast new',
+            korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'Бады и Витамины', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast new',
+            korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'БАДы и Витамины', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast new',
+            korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'БАДы и Витамины', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast new',
+            korean: true, new: true, price: 1100, note: '200гр x 5шт', category: 'Косметика', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast new',
+            korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'Косметика', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast new',
+            korean: true, new: true, price: 1100, note: '200гр x 5шт', category: 'Косметика', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast new',
+            korean: false, new: true, price: 1100, note: '200гр x 5шт', category: 'Косметика', hemohim: false
+        },
+        {
+            name: 'Atomy Toothpast new',
+            korean: true, new: true, price: 1100, note: '200гр x 5шт', category: 'Косметика', hemohim: false
+        },
+    ]
 }
 export const productSlice = createSlice({
     name: 'products',

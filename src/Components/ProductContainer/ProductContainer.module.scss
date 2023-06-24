@@ -16,54 +16,69 @@
     }
 }
 
-.product_container{
+.product_container {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
     cursor: pointer;
     transition: ease-in-out 0.3s;
 }
-.product_container:hover{
+
+.product_container:hover {
     transform: scale(1.05);
 }
-.image{
+
+.image {
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border-radius: 12px;
 }
-.rly_image{
-    width:250px;
+
+.rly_image {
+    width: 250px;
     border-radius: 12px;
-    @include _500{
+
+    @include _500 {
         width: 150px;
     }
 }
-.info{
+
+.info {
+    max-width: 262px;
     padding-top: 5px;
     font-size: 14pt;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    @include _500{
-font-size: 12pt;
+
+    @include _500 {
+        font-size: 12pt;
+    }
+
+    @include _883 {
+        max-width: 150px;
+        font-size: 10pt;
     }
 }
-.price{
+
+.price {
     font-weight: bold;
 }
-.korean_active{
-position: absolute;
-padding: 15px;
-border-radius: 12px 100% 100% 100%;
-opacity: 60%;
-background-color: red;
-font-weight: bold;
-color:white;
-letter-spacing: 1px;
-margin-bottom: 20px;
-margin-right: 5px;
+
+.korean_active {
+    position: absolute;
+    padding: 15px;
+    border-radius: 12px 100% 100% 100%;
+    opacity: 60%;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-right: 5px;
 }
-.korean{
+
+.korean {
     display: none;
 }

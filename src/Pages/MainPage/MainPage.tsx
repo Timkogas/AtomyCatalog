@@ -4,6 +4,7 @@ import { useAppSelector } from '../../Redux/Redux-hooks/hooks';
 import ProductContainer from '../../Components/ProductContainer/ProductContainer';
 import Button from '../../Components/UI/Button/Button';
 import koreanImg from '../../assets/korean_symbol.png'
+import Line from '../../Components/UI/Line/Line';
 interface MainPageProps {
 
 }
@@ -12,11 +13,11 @@ const MainPage: React.FC<MainPageProps> = () => {
     const products = useAppSelector(state => state.products.products)
     return (
         <div className={cls.main_page}>
-            <div className={cls.line2}></div>
+            <Line line2={true}/>
             <div className={cls.catalog_new}>
                 {products.filter(el => el.new === true).map(el => <ProductContainer name={el.name} note={el.note} korean={el.korean} price={el.price} />)}
             </div>
-            <div className={cls.line}></div>
+            <Line line2={false}/>
             <div className={cls.registry}>
                 <h1 className={cls.title}>АТОМИ КОРЕЯ</h1>
                 <span className={cls.subtitle}>Премиальное качество, доступное каждому!</span>
@@ -25,7 +26,7 @@ const MainPage: React.FC<MainPageProps> = () => {
                     в мероприятиях и акциях от компании!</p>
                 <Button category='registry'>Регистрация в атоми</Button>
             </div>
-            <div className={cls.line2}></div>
+            <Line line2={true}/>
             <div className={cls.info}>
                 <div className={cls.how_to_order}>
                     <span className={cls.info_title}>Как заказать товар</span>
@@ -50,7 +51,7 @@ const MainPage: React.FC<MainPageProps> = () => {
                     <img src={koreanImg} className={cls.korean_img} alt="" />
                 </div>
             </div>
-            <div className={cls.line}></div>
+            <Line line2={false}/>
         </div>
     );
 };
