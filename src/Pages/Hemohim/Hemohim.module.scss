@@ -1,0 +1,41 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+.hemohim{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url(../../assets/hemohim_banner2.jpg);
+        width: 100%;
+        height: 400px;
+        color: white;
+    }
+}
+.banner_title{
+    letter-spacing: 2px;
+    font-size: 32pt;
+    margin-bottom: 10px;
+
+}
+.banner_subtitle{
+    font-size: 18pt;
+}

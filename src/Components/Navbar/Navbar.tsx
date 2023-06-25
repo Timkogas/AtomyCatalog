@@ -34,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                 {windowHW.windowW > 883 ? 
                 <ul>
                 <NavLink className={cls.NavLink} to='/'><li>Главная </li></NavLink>
-                <li>ХемоХим</li>
+                <NavLink className={cls.NavLink} to='/hemohim'><li>ХемоХим</li></NavLink>
                 <NavLink className={cls.NavLink} to='/vitamins'><li>БАДы и Витамины</li></NavLink>
                 <NavLink className={cls.NavLink} to='/cosmetics'><li>Косметика</li></NavLink>
                 <NavLink className={cls.NavLink} to='/hygiene'> <li>Личная Гигиена</li></NavLink>
@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             </ul>:
                  <select className={cls.dropdown} name="dropdown" id="dropdown">
                     <option value="" onClick={()=>navigate('/')}>Главная</option>
-                    <option value="">ХемоХим</option>
+                    <option value="" onClick={()=>navigate('/hemohim')}>ХемоХим</option>
                     <option value="" onClick={()=>navigate('/vitamins')}>БАДы и Витамины</option>
                     <option value="" onClick={()=>navigate('/cosmetics')}>Косметика</option>
                     <option value="" onClick={()=>navigate('/hygiene')}>Личная Гигиена</option>

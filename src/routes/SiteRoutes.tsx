@@ -9,6 +9,7 @@ import Housing from "../Pages/Housing/Housing";
 import FoodNDrinks from "../Pages/FoodNDrinks/FoodNDrinks";
 import Clothes from "../Pages/Clothes/Clothes";
 import Contacts from "../Pages/Contacts/Contacts";
+import Hemohim from "../Pages/Hemohim/Hemohim";
 
 interface routesProps {
 
@@ -26,6 +27,7 @@ const routes: React.FC<routesProps> = () => {
                 <Route path="/foodndrinks" element={<FoodNDrinks/>}/>
                 <Route path="/clothes" element={<Clothes/>}/>
                 <Route path="/contacts" element={<Contacts/>}/>
+                <Route path="/hemohim" element={<Hemohim/>}/>
             </Route>
         </Routes>
     );
