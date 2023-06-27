@@ -1,8 +1,10 @@
 import React from 'react';
 import cls from './Hemohim.module.scss'
 import Line from '../../Components/UI/Line/Line';
+import hemohim from '../../assets/hemohim_sertificate.jpg'
+import Button from '../../Components/UI/Button/Button';
 interface HemohimProps {
-    
+
 }
 
 const Hemohim: React.FC<HemohimProps> = () => {
@@ -13,17 +15,30 @@ const Hemohim: React.FC<HemohimProps> = () => {
                 <span className={cls.banner_subtitle}>РАЗБУДИ ИМУННЫЕ КЛЕТКИ СВОЕГО ОРГАНИЗМА</span>
             </div>
             <div className={cls.hemohim_info}>
-
-                <div className={cls.info_textNSertificate}>
-                    <p className={cls.info_text}>
-
+                    <div className={cls.hemohim_info_body}>
+                    <span className={cls.hemohim_info_text_selection}>
+                            АТОМИ ХемоХим - препарат, не имеющий аналогов в мире, для восстановления иммунитета, защиты от онкозаболеваний и оздоровления всего организма человека.
+                        </span>
+                    <p className={cls.hemohim_info_text}>
+                        ХемоХим разработан в 1997 году учёными KAERI - НИИ Атомной энергетики Южной Кореи по заказу правительства в рамках национального проекта по укреплению здоровья населения страны.
+                       </p>
+                       <p className={cls.hemohim_info_text}>
+                        ХемоХим зарегистрирован Корейским управлением по контролю качества продуктов и лекарств (MFDS) как лучший индивидуально одобренный функциональный комплекс.
+                       </p>
+                       <p className={cls.hemohim_info_text}>
+                    Имеет сертификаты качества GMP и Минздрава Южной Кореи.
+                        Запатентован в 7-ми странах мира
+                        </p>
+                      <p className={cls.hemohim_info_text}>
+                        Внесен в российские справочники лекарственных средств для медицинских специалистов ГОЭТАР и MEDUM
                     </p>
-                    <div className={cls.info_sertificate}>
-                        <img src="#" alt=""  className={cls.info_img}/>
-                        <span className={cls.info_subtitle}>В мае 2020 года ХемоХим получил наивысший сертификат экологичности состава.</span>
+                    <Button category='hemohim'>ЗАКАЗАТЬ ХЕМОХИМ</Button>
                     </div>
-                </div>
-
+                    <div className={cls.hemohim_info_sertificate}>
+                        <img src={hemohim} alt="" className={cls.hemohim_info_img} />
+                        <span className={cls.hemohim_info_subtitle}>В мае 2020 года ХемоХим получил наивысший сертификат экологичности состава.</span>
+                    </div>
+                    
             </div>
             <div className={cls.hemohim_atomyhemohim}>
 
@@ -49,7 +64,7 @@ const Hemohim: React.FC<HemohimProps> = () => {
             <div className={cls.hemohim_history}>
 
             </div>
-            <Line line2={false}/>
+            <Line line2={false} />
         </div>
     );
 };

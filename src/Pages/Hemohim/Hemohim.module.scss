@@ -25,17 +25,56 @@
         align-items: center;
         justify-content: center;
         background: url(../../assets/hemohim_banner2.jpg);
-        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 1px;
+        border-radius: 12px;
+        align-self: center;
+        width: 1300px;
         height: 400px;
         color: white;
+        overflow: hidden;
     }
 }
 .banner_title{
     letter-spacing: 2px;
     font-size: 32pt;
     margin-bottom: 10px;
-
+    text-shadow: 5px 5px 12px black;
 }
 .banner_subtitle{
     font-size: 18pt;
+    text-shadow: 5px 5px 12px black;
+}
+.hemohim_info{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    justify-items: center;
+    width: 60%;
+    margin-bottom: 50px;
+    &_body{
+        display: flex;
+        flex-direction: column;
+        padding-right: 50px;
+        align-items: center;
+    }
+    &_text{
+        font-size: 14pt;
+        margin-bottom: 20px;
+        &_selection{
+            font-size: 14pt;
+            font-weight: 700; 
+            color: rgb(74, 7, 7);
+            margin-bottom: 20px;
+         }
+    }
+    
+    &_sertificate{
+        display: flex;
+        flex-direction: column;
+    }
+    &_subtitle{
+        width: 60%;
+        font-size: 8pt;
+    }
 }
