@@ -14,7 +14,7 @@ const FoodNDrinks: React.FC<FoodNDrinks> = () => {
             <Line line2={true}/>
             <span className={cls.foodndrinks_title}>Кофе, корейская лапша Рамен и другая еда и напитки с международным сертификатом HACCP</span>
             <div className={cls.foodndrinks_container}>
-                {products.filter(el=>el.category==='Еда и напитки').map(el=><ProductContainer name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
+                {products.filter(el=>el.category==='Еда и напитки').map(el=><ProductContainer id={el.id} name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
             </div>
             <Line line2={false}/>
         </div>

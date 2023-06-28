@@ -15,7 +15,7 @@ const Vitamins: React.FC<VitaminsProps> = () => {
             <span className={cls.vitamins_title}>Все витамины и БАДы АТОМИ имеют международные сертификаты качества HACCP, GMP</span>
             
             <div className={cls.vitamins_container}>
-                {products.filter(el=>el.category==='БАДы и Витамины').map(el=><ProductContainer name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
+                {products.filter(el=>el.category==='БАДы и Витамины').map(el=><ProductContainer id={el.id} name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
             </div>
             <Line line2={false}/>
         </div>

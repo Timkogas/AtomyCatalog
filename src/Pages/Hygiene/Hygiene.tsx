@@ -16,7 +16,7 @@ const Hygiene: React.FC<HygieneProps> = () => {
             <Line line2={true}/>
             <span className={cls.hygiene_title}>Экологичные, абсолютно безопасные моющие и ухаживающие средства для всей семьи!</span>
             <div className={cls.hygiene_container}>
-                {products.filter(el=>el.category==='Личная гигиена').map(el=><ProductContainer name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
+                {products.filter(el=>el.category==='Личная гигиена').map(el=><ProductContainer id={el.id} name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
             </div>
             <Line line2={false}/>
         </div>

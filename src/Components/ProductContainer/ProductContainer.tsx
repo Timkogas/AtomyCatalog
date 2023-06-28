@@ -6,6 +6,7 @@ interface ProductContainerProps {
     korean: boolean,
     price: number,
     note: string,
+    id:number
 }
 
 const ProductContainer: React.FC<ProductContainerProps> = ({name,korean,price,note}) => {

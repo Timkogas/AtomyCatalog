@@ -5,6 +5,8 @@ import ProductContainer from '../../Components/ProductContainer/ProductContainer
 import Button from '../../Components/UI/Button/Button';
 import koreanImg from '../../assets/korean_symbol.png'
 import Line from '../../Components/UI/Line/Line';
+import Portal from '../../Components/Portal/Portal';
+import ProductPage from '../ProductPage/ProductPage';
 interface MainPageProps {
 
 }
@@ -15,7 +17,10 @@ const MainPage: React.FC<MainPageProps> = () => {
         <div className={cls.main_page}>
             <Line line2={true}/>
             <div className={cls.catalog_new}>
-                {products.filter(el => el.new === true).map(el => <ProductContainer name={el.name} note={el.note} korean={el.korean} price={el.price} />)}
+                <Portal className='inactive'>
+                    <ProductPage name='s' note='s' id={1212121} price={1212} body='1asdsad'/>
+                </Portal>
+                {products.filter(el => el.new === true).map(el => <ProductContainer key={el.id} id={el.id} name={el.name} note={el.note} korean={el.korean} price={el.price} />)}
             </div>
             <Line line2={false}/>
             <div className={cls.registry}>

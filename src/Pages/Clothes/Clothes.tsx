@@ -14,7 +14,7 @@ const Clothes: React.FC<ClothesProps> = () => {
             <Line line2={true}/>
             <span className={cls.clothes_title}>Одежда, белье и аксессуары из Южной Кореи</span>
             <div className={cls.clothes_container}>
-                {products.filter(el=>el.category==='Одежда и другое').map(el=><ProductContainer name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
+                {products.filter(el=>el.category==='Одежда и другое').map(el=><ProductContainer id={el.id} name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
             </div>
             <Line line2={false}/>
         </div>

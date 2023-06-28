@@ -14,7 +14,7 @@ const Housing: React.FC<HousingProps> = () => {
             <Line line2={true}/>
             <span className={cls.housing_title}>Экологичные и абсолютно безопасные товары для дома из Южной Кореи.</span>
             <div className={cls.housing_container}>
-                {products.filter(el=>el.category==='Товары для дома').map(el=><ProductContainer name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
+                {products.filter(el=>el.category==='Товары для дома').map(el=><ProductContainer id={el.id} name={el.name} note={el.note} korean={el.korean} price={el.price}/>)}
             </div>
             <Line line2={false}/>
         </div>
