@@ -6,12 +6,13 @@ interface ProductContainerProps {
     korean: boolean,
     price: number,
     note: string,
-    id:number
+    id:number,
+    onClick?:()=>void
 }
 
-const ProductContainer: React.FC<ProductContainerProps> = ({name,korean,price,note}) => {
+const ProductContainer: React.FC<ProductContainerProps> = ({name,korean,price,note,onClick}) => {
     return (
-        <div className={cls.product_container}>
+        <div className={cls.product_container} onClick={onClick}>
             <div className={cls.image}>
                 <span className={korean===true? cls.korean_active :cls.korean}>KR</span>
                 <img className={cls.rly_image} src={placehold} alt="" />

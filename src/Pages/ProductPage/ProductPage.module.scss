@@ -1,0 +1,84 @@
+.ProductPage {
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.ProductPage_info {
+    display: flex;
+    flex-direction: column;
+
+    &_title {
+        letter-spacing: 1px;
+        font-size: 48pt;
+    }
+
+    &_article {
+        color: rgb(124, 121, 121);
+    }
+    &_price{
+        font-size: 18pt;
+        letter-spacing: 1px;
+        font-weight: bold;
+        margin: 20px 0px;
+    }
+    &_order{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &_counter{
+        &_button_minus, &_button_plus{
+            width: 32px;
+            height: 32px;
+            font-size: 14pt;
+            border: none;
+            color: white;
+            background-color: rgb(17, 118, 136);
+            border-radius: 12px;
+            transition: ease-in-out 0.3s;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(10, 70, 81);
+            }
+        }
+        &_button_minus{
+            border-radius: 12px 0px 0px 12px;
+        }
+        &_amount{
+            font-size: 14pt;
+            padding: 0px 10px;
+        }
+        
+    }
+    &_note{
+        color: rgb(124, 121, 121);
+        margin: 10px 0px;
+    }
+    &_body{
+        font-size: 18pt;
+        width: 50vw;
+    }
+}
+
+.ProductPage_imageContainer {
+    width: 600px;
+
+    &_placeholder {
+        width: 600px;
+    }
+}
+.cross{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    opacity: 40%;
+    transition: ease-in-out 0.3s;
+}
+.cross:hover{
+    opacity: 60%;
+}
+.cross img{
+    width: 25px;
+}

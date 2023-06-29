@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cls from './MainPage.module.scss'
 import { useAppSelector } from '../../Redux/Redux-hooks/hooks';
 import ProductContainer from '../../Components/ProductContainer/ProductContainer';
@@ -12,17 +12,34 @@ interface MainPageProps {
 }
 
 const MainPage: React.FC<MainPageProps> = () => {
-    const products = useAppSelector(state => state.products.products)
+    const products = useAppSelector(state => state.products.products);
+    const [activeModal, setActiveModal]=useState('inactive')
+    const [product, setProduct] = useState({
+        name:'',
+        note:'',
+        price:0,
+        id:0,
+        body:''
+    })
+    const productOpen = (id:number,name:string,note:string,price:number,body:string) => {
+        setProduct({name:name, note:note,price:price, body:body,id:id})
+        setActiveModal('active_product')
+        document.body.style.overflowY ='hidden';
+    }
+    const productClose = () =>{
+        setActiveModal('inactive')
+        document.body.style.overflowY ='scroll';
+    }
     return (
         <div className={cls.main_page}>
-            <Line line2={true}/>
+            <Line line2={true} />
             <div className={cls.catalog_new}>
-                <Portal className='inactive'>
-                    <ProductPage name='s' note='s' id={1212121} price={1212} body='1asdsad'/>
+                <Portal className={activeModal}>
+                    <ProductPage closeWindow={productClose} name={product.name} note={product.note} id={product.id} price={product.price} body={product.body} />
                 </Portal>
-                {products.filter(el => el.new === true).map(el => <ProductContainer key={el.id} id={el.id} name={el.name} note={el.note} korean={el.korean} price={el.price} />)}
+                {products.filter(el => el.new === true).map(el => <ProductContainer onClick={()=>productOpen(el.id,el.name,el.note,el.price,el.body)} key={el.id} id={el.id} name={el.name} note={el.note} korean={el.korean} price={el.price} />)}
             </div>
-            <Line line2={false}/>
+            <Line line2={false} />
             <div className={cls.registry}>
                 <h1 className={cls.title}>АТОМИ КОРЕЯ</h1>
                 <span className={cls.subtitle}>Премиальное качество, доступное каждому!</span>
@@ -31,7 +48,7 @@ const MainPage: React.FC<MainPageProps> = () => {
                     в мероприятиях и акциях от компании!</p>
                 <Button category='registry'>Регистрация в атоми</Button>
             </div>
-            <Line line2={true}/>
+            <Line line2={true} />
             <div className={cls.info}>
                 <div className={cls.how_to_order}>
                     <span className={cls.info_title}>Как заказать товар</span>
@@ -56,7 +73,7 @@ const MainPage: React.FC<MainPageProps> = () => {
                     <img src={koreanImg} className={cls.korean_img} alt="" />
                 </div>
             </div>
-            <Line line2={false}/>
+            <Line line2={false} />
         </div>
     );
 };
