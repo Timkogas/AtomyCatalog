@@ -9,7 +9,7 @@ interface ProductPageProps {
     note: string,
     id:number,
     body:string,
-    closeWindow?:()=>void
+    closeWindow?:any
 }
 
 const ProductPage: React.FC<ProductPageProps> = ({name,price,note,id,body,closeWindow}) => {
@@ -24,7 +24,10 @@ const ProductPage: React.FC<ProductPageProps> = ({name,price,note,id,body,closeW
             setAmount(0)
         }
     }
-    
+    const closeClick = () =>{
+        closeWindow();
+        setAmount(0)
+    }
     return (
         <div className={cls.ProductPage}>
             <div className={cls.ProductPage_imageContainer}>
@@ -40,12 +43,12 @@ const ProductPage: React.FC<ProductPageProps> = ({name,price,note,id,body,closeW
                             <span className={cls.ProductPage_info_counter_amount}>{amount}</span>
                             <button onClick={downgradeAmound} className={cls.ProductPage_info_counter_button_minus}>-</button>
                     </div>
-                    <Button category='form'>Заказать</Button>
+                    <Button category='buy'>Заказать</Button>
                 </div>
                 <span className={cls.ProductPage_info_note}>{note}</span>
                 <p className={cls.ProductPage_info_body}>{body}</p>
             </div>
-            <div onClick={closeWindow} className={cls.cross}><img src={cross} alt="" /></div>
+            <div onClick={closeClick} className={cls.cross}><img src={cross} alt="" /></div>
         </div>
     );
 };

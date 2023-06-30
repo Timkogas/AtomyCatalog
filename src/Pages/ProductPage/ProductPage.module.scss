@@ -1,17 +1,46 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+
+
+
+
 .ProductPage {
     background-color: white;
     display: flex;
-    overflow: hidden;
     margin-top: 50px;
+    @include _883(){
+        flex-direction: column;
+        
+    }
 }
 
 .ProductPage_info {
     display: flex;
     flex-direction: column;
-
+    @include _883{
+        align-items: center;
+    }
     &_title {
         letter-spacing: 1px;
         font-size: 48pt;
+        @include _883(){
+            font-size: 32pt;
+        }
     }
 
     &_article {
@@ -25,13 +54,14 @@
     }
     &_order{
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
     &_counter{
+        margin-bottom: 5px;
         &_button_minus, &_button_plus{
-            width: 32px;
-            height: 32px;
+            width: 30px;
+            height: 30px;
             font-size: 14pt;
             border: none;
             color: white;
@@ -42,9 +72,6 @@
             &:hover{
                 background-color: rgb(10, 70, 81);
             }
-        }
-        &_button_minus{
-            border-radius: 12px 0px 0px 12px;
         }
         &_amount{
             font-size: 14pt;
@@ -59,14 +86,26 @@
     &_body{
         font-size: 18pt;
         width: 50vw;
+        @include _883(){
+            width: 100%;
+            padding: 0px 20px;
+            font-size: 14pt;
+            
+        }
     }
 }
 
 .ProductPage_imageContainer {
     width: 600px;
-
+    @include _883(){
+        width: 300px;
+        align-self: center;
+    }
     &_placeholder {
         width: 600px;
+        @include _883(){
+            width: 300px;
+        }
     }
 }
 .cross{

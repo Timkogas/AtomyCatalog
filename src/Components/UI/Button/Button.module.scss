@@ -66,7 +66,7 @@
     background-color: rgb(26, 159, 183);
  }
  
- .button_buy{
+ .button_hemohim{
     height: 5vh;
     width: 50%;
     background-color: #ff1f35;
@@ -87,10 +87,35 @@
         margin-top: 5px;
     }
 }
-.button_buy:hover{
+.button_hemohim:hover{
     background-color: #c93040;
  }
- .button_buy:active{
+ .button_hemohim:active{
     background-color: #ff1f35;
  }
  
+ .button_buy{
+    height: 32px;
+    width: 90px;
+    background-color: rgb(26, 159, 183);
+    color: white;
+    letter-spacing: 1px;
+    font-size: 12pt;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+    @include _883(){
+        border-radius: 12px;
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+.button_buy:hover{
+    background-color: rgb(23, 125, 143);
+ }
+ .button_buy:active{
+    background-color: rgb(26, 159, 183);
+ }
