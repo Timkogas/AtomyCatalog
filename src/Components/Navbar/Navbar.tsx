@@ -4,16 +4,27 @@ import Input from '../UI/Input/Input';
 import Button from '../UI/Button/Button';
 import Atomy from '../../assets/atomy.png'
 import { NavLink, useNavigate } from 'react-router-dom';
+import Portal from '../Portal/Portal';
+import CartWindow from '../../Pages/CartWindow/CartWindow';
 interface NavbarProps {
 
 }
 
 const Navbar: React.FC<NavbarProps> = () => {
+
+  const [activeModal, setActiveModal]=useState('inactive')
+  const cartOpen = () => {
+    setActiveModal('active_cart')
+}
+const cartClose = () =>{
+    setActiveModal('inactive')
+}
     const [windowHW, setWindowHW] = useState({
         windowH:window.innerHeight,
         windowW:window.innerWidth
     })
     const navigate = useNavigate();
+
     const detectSize = () => {
         setWindowHW({
           windowW: window.innerWidth,
@@ -42,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                 <NavLink className={cls.NavLink} to='/foodndrinks'><li>Еда и напитки</li></NavLink>
                 <NavLink className={cls.NavLink} to='/clothes'><li>Одежда и другое</li></NavLink>
                 <NavLink className={cls.NavLink} to='/contacts'><li>Контакты</li></NavLink>
-                <li>Корзина</li>
+                <li onClick={cartOpen}>Корзина</li>
             </ul>:
                  <select className={cls.dropdown} name="dropdown" id="dropdown">
                     <option value="" onClick={()=>navigate('/')}>Главная</option>
@@ -62,6 +73,9 @@ const Navbar: React.FC<NavbarProps> = () => {
                     <Input type='text' placeholder='Поиск по сайту' name='search' />
                     <Button category='form'>Поиск</Button>
                 </div>
+                <Portal className={activeModal}>
+                  <CartWindow onClick={cartClose} />
+                </Portal>
             </nav>
         </>
     );

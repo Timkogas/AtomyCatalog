@@ -1,0 +1,15 @@
+.CartProductContainer{
+    color: black;
+    display: flex;
+    &_info{
+        display: flex;
+        flex-direction: column;
+        &_title{
+            font-weight: bold;
+        }
+        &_article{
+            font-size: 10pt;
+            color: rgb(158, 157, 157);
+        }
+    }
+}

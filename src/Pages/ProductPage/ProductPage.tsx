@@ -3,6 +3,8 @@ import cls from './ProductPage.module.scss';
 import Button from '../../Components/UI/Button/Button';
 import imgplaceholder from '../../assets/67526652.jpg';
 import cross from '../../assets/cross.svg';
+import { useAppDispatch, useAppSelector } from '../../Redux/Redux-hooks/hooks';
+import { cartAdd } from '../../Redux/Redux-slices/cartSlice';
 interface ProductPageProps {
     name: string,
     price: number,
@@ -14,10 +16,12 @@ interface ProductPageProps {
 
 const ProductPage: React.FC<ProductPageProps> = ({name,price,note,id,body,closeWindow}) => {
     const [amount, setAmount]=useState(1);
+    const cart = useAppSelector(state=>state.cart.products)
+    const dispatch =useAppDispatch()
     const raiseAmount = () =>{
         setAmount(amount+1)
     }
-    const downgradeAmound = () =>{
+    const downgradeAmount = () =>{
 
         setAmount(amount-1)
         if (amount<=0){
@@ -41,9 +45,9 @@ const ProductPage: React.FC<ProductPageProps> = ({name,price,note,id,body,closeW
                     <div className={cls.ProductPage_info_counter}>
                         <button onClick={raiseAmount} className={cls.ProductPage_info_counter_button_plus}>+</button>
                             <span className={cls.ProductPage_info_counter_amount}>{amount}</span>
-                            <button onClick={downgradeAmound} className={cls.ProductPage_info_counter_button_minus}>-</button>
+                            <button onClick={downgradeAmount} className={cls.ProductPage_info_counter_button_minus}>-</button>
                     </div>
-                    <Button category='buy'>Заказать</Button>
+                    <Button disabled={amount===0?true:false} category='buy' onClick={()=>dispatch(cartAdd({name:name,id:id,price:price,amount:amount}))}>Заказать</Button>
                 </div>
                 <span className={cls.ProductPage_info_note}>{note}</span>
                 <p className={cls.ProductPage_info_body}>{body}</p>

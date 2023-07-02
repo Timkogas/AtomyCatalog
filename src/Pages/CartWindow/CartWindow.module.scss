@@ -1,0 +1,38 @@
+.CartWindow {
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    padding: 20px;
+}
+.Close{
+    margin: 5px;
+    text-align: right;
+    border-bottom: 1px dashed rgb(26, 159, 183);
+    cursor: pointer;
+    user-select: none;
+    transition:  ease-in-out 0.3s;
+    &:hover{
+        color: rgb(26, 159, 183);
+    }
+}
+.cart{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    border-bottom: 1px dotted rgb(26, 159, 183);
+    &_title{
+        font-size: 14pt;
+        letter-spacing: 1px;
+        font-weight: bold;
+        color: rgb(26, 159, 183);
+    }
+}
+.empty{
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(26, 159, 183);
+    border-bottom: 1px dotted rgb(26, 159, 183);
+}

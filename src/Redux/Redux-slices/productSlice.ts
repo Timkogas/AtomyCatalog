@@ -203,9 +203,7 @@ const initialState: ProductState = {
 export const productSlice = createSlice({
     name: 'products',
     initialState,
-    reducers: {
-
-    }
+    reducers: {}
 })
 export const selectProducts = (state: RootState) => state.products.products
 
