@@ -1,14 +1,18 @@
 import React from 'react';
 import cls from './Input.module.scss'
-interface InputProps {
-    type:string,
-    placeholder:string,
-    name:string,
-}
+import { type InputHTMLAttributes} from 'react';
+import { IMaskInput , IMaskMixin} from 'react-imask';
 
-const Input: React.FC<InputProps> = ({type,placeholder,name}) => {
+type InputProps = {
+    category?:string,
+    mask?:string
+}& InputHTMLAttributes<HTMLInputElement>
+
+
+
+const Input: React.FC<InputProps> = ({category,mask, ...otherProps}) => {
     return (
-        <input className={cls.Input} type={type} placeholder={placeholder} name={name} />
+        <IMaskInput mask={mask} {...otherProps} className={category==='form'?cls.Input_form:cls.Input}  />
     );
 };
 

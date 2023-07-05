@@ -42,7 +42,8 @@
 }
 .button_form{
     height: 32px;
-    width: 90px;
+    width: max-content;
+    padding: 0 20px;
     background-color: rgb(26, 159, 183);
     color: white;
     letter-spacing: 1px;
@@ -96,7 +97,8 @@
  
  .button_buy{
     height: 32px;
-    width: 90px;
+    width: max-content;
+    padding: 0 20px;
     background-color: rgb(26, 159, 183);
     color: white;
     letter-spacing: 1px;
@@ -119,6 +121,14 @@
  .button_buy:active{
     background-color: rgb(26, 159, 183);
  }
+ 
  button:disabled{
     opacity: 40%;
+    cursor: not-allowed;
+    &:hover{
+        opacity: 40%;
+    }
+    &:active{
+        opacity: 40%;
+    }
  }

@@ -1,15 +1,14 @@
 import React from 'react';
 import cls from './Button.module.scss'
-interface ButtonProps {
+import { type ButtonHTMLAttributes} from 'react'
+type ButtonProps = {
     children:string,
-    category:string,
-    onClick?:()=>void,
-    disabled?:boolean
-}
+    category:string
+} & ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button: React.FC<ButtonProps> = ({children,category,onClick,disabled}) => {
+const Button: React.FC<ButtonProps> = ({children,category, ...otherProps}) => {
     return (
-        <button disabled={disabled} onClick={onClick} className={category==='hemohim'?cls.button_hemohim:category==='registry'?cls.button_registry:category==='form'?cls.button_form:category==='buy'?cls.button_buy:cls.button}>
+        <button  {...otherProps} className={category==='hemohim'?cls.button_hemohim:category==='registry'?cls.button_registry:category==='form'?cls.button_form:category==='buy'?cls.button_buy:cls.button}>
             {children}
         </button>
     );

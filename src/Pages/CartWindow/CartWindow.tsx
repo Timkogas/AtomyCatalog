@@ -3,6 +3,8 @@ import { useAppDispatch, useAppSelector } from '../../Redux/Redux-hooks/hooks';
 import cls from './CartWindow.module.scss'
 import CartProductContainer from '../../Components/CartProductContainer/CartProductContainer';
 import { cartRemove } from '../../Redux/Redux-slices/cartSlice';
+import Button from '../../Components/UI/Button/Button';
+import { useNavigate } from 'react-router';
 interface CartWindowProps {
     onClick?:()=>void
 }
@@ -10,7 +12,7 @@ interface CartWindowProps {
 const CartWindow: React.FC<CartWindowProps> = ({onClick}) => {
     const cart = useAppSelector(state=>state.cart.products)
     const dispatch = useAppDispatch();
-    
+    const navigate = useNavigate()
     const [summary, setSummary] = useState(0);
     useEffect(()=>{
         const sum =cart.map(el=>el.amount*el.price);
@@ -25,8 +27,12 @@ const CartWindow: React.FC<CartWindowProps> = ({onClick}) => {
         <>
         <div className={cls.cart}>
         <div onClick={onClick} className={cls.Close}>Закрыть</div>
-        <div className={cls.sum}>Сумма заказа: {summary}</div>
+        <Button onClick={()=>navigate('/order')} disabled={cart.length === 0 ? true : false}  category='buy'>Заказать</Button>
+        <div>
         <div className={cls.cart_title}>Ваша корзина</div>
+        <div className={cls.sum}>Сумма заказа: {summary}</div>
+        </div>
+        
         </div>
         <div className={cls.CartWindow}>
             <div className={cls.CartWindow_orders}>

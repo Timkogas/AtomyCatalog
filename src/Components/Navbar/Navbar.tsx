@@ -65,7 +65,7 @@ const cartClose = () =>{
                     <option value="" onClick={()=>navigate('/foodndrinks')}>Еда и Напитки</option>
                     <option value="" onClick={()=>navigate('/clothes')}>Одежда и другое</option>
                     <option value="" onClick={()=>navigate('/contacts')}>Контакты</option>
-                    <option value="">Корзина</option>
+                    <option onClick={cartOpen} value="">Корзина</option>
                  </select>
             }
                </div>
