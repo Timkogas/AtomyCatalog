@@ -75,7 +75,7 @@ const BuyPage: React.FC<BuyPageProps> = () => {
                     onChange={inputHandler}
                     required={true}
                     category='form'
-                    type='phone'
+                    type='text'
                     placeholder='Номер телефона'
                     id='phoneNumber'
                     name='phoneNumber'
