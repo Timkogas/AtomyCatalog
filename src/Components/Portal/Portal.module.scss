@@ -1,3 +1,22 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+
+
 .inactive{
     display: none;
 }
@@ -23,6 +42,9 @@
     bottom: 0;
     right: 10px;
     height: 500px;
-    width: 30vw;
+    width: 450px;
     border-radius: 12px;
+    @include _883(){
+        width: 300px;
+    }
 }

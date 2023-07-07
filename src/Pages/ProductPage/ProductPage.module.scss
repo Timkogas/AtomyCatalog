@@ -39,6 +39,7 @@
     &_title {
         letter-spacing: 1px;
         font-size: 48pt;
+        text-align: center;
         @include _883(){
             font-size: 32pt;
         }

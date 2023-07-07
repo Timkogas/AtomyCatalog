@@ -1,3 +1,24 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+
+
+
+
 .CartWindow {
     width: 100%;
     height: 400px;
@@ -29,6 +50,12 @@
         letter-spacing: 1px;
         font-weight: bold;
         color: rgb(26, 159, 183);
+        @include _883{
+            font-size: 10pt;
+        }
+    }
+    @include _883(){
+        height: 80px;
     }
 }
 .empty{
@@ -40,4 +67,7 @@
 }
 .sum{
     color: rgb(122, 122, 122);
+    @include _883(){
+        font-size: 8pt;
+    }
 }

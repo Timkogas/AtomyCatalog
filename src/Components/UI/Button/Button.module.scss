@@ -97,8 +97,8 @@
  
  .button_buy{
     height: 32px;
-    width: max-content;
-    padding: 0 20px;
+    width: 90px;
+    padding: 0 10px;
     background-color: rgb(26, 159, 183);
     color: white;
     letter-spacing: 1px;
@@ -111,7 +111,6 @@
     cursor: pointer;
     @include _883(){
         border-radius: 12px;
-        width: 100%;
         margin-top: 5px;
     }
 }
@@ -119,7 +118,8 @@
     background-color: rgb(23, 125, 143);
  }
  .button_buy:active{
-    background-color: rgb(26, 159, 183);
+    background-color: rgb(26, 183, 110);
+    transform: scale(1.02);
  }
  
  button:disabled{

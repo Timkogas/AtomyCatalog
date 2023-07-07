@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import cls from './BuyPage.module.scss'
 import Input from '../../Components/UI/Input/Input';
 import { useAppDispatch, useAppSelector } from '../../Redux/Redux-hooks/hooks';
@@ -117,7 +117,7 @@ const BuyPage: React.FC<BuyPageProps> = () => {
                     name='index'
                     value={formData.index}
                 />
-                <Button type='submit' category='buy'>Оформить заказ</Button>
+                <Button disabled={cart.length===0?true:false} type='submit' category='registry'>Оформить заказ</Button>
             </form>
             <div className={cls.cart_info}>
                 <div className={cls.cart_info_total}>

@@ -1,3 +1,21 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+
 .Input{
    height: 32px;
     padding-left: 10px;
@@ -10,12 +28,15 @@
     &_form{
     height: 50px;
     padding-left: 10px;
-    width: 35vw;
+    width: 450px;
     border-radius: 12px;
     border:2px solid rgb(26, 159, 183);
     outline: none;
     font-size: 14pt;
     overflow: hidden;
+        @include _500(){
+            width: 300px;
+        }
     }
 }
 

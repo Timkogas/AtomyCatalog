@@ -1,17 +1,50 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+
+
 .CartProductContainer{
     color: black;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    @include _883(){
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 5px;
+        border: 1px solid rgb(158, 157, 157);
+        padding: 10px;
+        border-radius: 8px;
+    }
     &_info{
         display: flex;
         flex-direction: column;
         &_title{
             font-weight: bold;
+            
         }
         &_article{
             font-size: 10pt;
             color: rgb(158, 157, 157);
+        }
+        &_sumprice{
+            @include _883(){
+                font-size: 10pt;
+            }
         }
     }
 }

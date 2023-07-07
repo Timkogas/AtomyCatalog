@@ -41,7 +41,7 @@ const cartClose = () =>{
         <>
             <nav className={cls.navbar}>
                <div className={cls.logo_dropdown}>
-               <img src={Atomy} alt="" />
+               <img onClick={()=>navigate('/')} src={Atomy} alt="" />
                 {windowHW.windowW > 883 ? 
                 <ul>
                 <NavLink className={cls.NavLink} to='/'><li>Главная </li></NavLink>
