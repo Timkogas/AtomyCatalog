@@ -1,0 +1,36 @@
+@mixin _1300 {
+    @media screen and (max-width:1300px) {
+        @content
+    }
+}
+
+@mixin _883 {
+    @media screen and (max-width:883px) {
+        @content
+    }
+}
+
+@mixin _500 {
+    @media screen and (max-width:500px) {
+        @content
+    }
+}
+
+.RegistryPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &_title{
+        padding: 10px;
+        color: rgb(26, 159, 183);
+    }
+    &_form{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 450px;
+       padding: 5px;
+    }
+}

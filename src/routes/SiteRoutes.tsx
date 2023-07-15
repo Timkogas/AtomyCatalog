@@ -11,6 +11,7 @@ import Clothes from "../Pages/Clothes/Clothes";
 import Contacts from "../Pages/Contacts/Contacts";
 import Hemohim from "../Pages/Hemohim/Hemohim";
 import BuyPage from "../Pages/BuyPage/BuyPage";
+import RegistryPage from "../Pages/RegistryPage/RegistryPage";
 
 interface routesProps {
 
@@ -30,6 +31,7 @@ const routes: React.FC<routesProps> = () => {
                 <Route path="/contacts" element={<Contacts/>}/>
                 <Route path="/hemohim" element={<Hemohim/>}/>
                 <Route path="/order" element={<BuyPage/>}/>
+                <Route path="/registry" element={<RegistryPage/>}/>
             </Route>
         </Routes>
     );

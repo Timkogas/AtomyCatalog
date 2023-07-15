@@ -33,25 +33,45 @@
         height: 400px;
         color: white;
         overflow: hidden;
+        @include _1300(){
+            width: 883px;
+        }
+        @include _883(){
+            width: 100%;
+            background-position: -200px;
+            border-radius: 0px;
+        }
     }
 }
 .banner_title{
     letter-spacing: 2px;
     font-size: 32pt;
     margin-bottom: 10px;
-    text-shadow: 5px 5px 12px black;
+    text-shadow: 5px 5px 12px rgb(109, 104, 104);
+    @include _883(){
+        font-size: 24pt;
+    }
 }
 .banner_subtitle{
     font-size: 18pt;
-    text-shadow: 5px 5px 12px black;
+    text-shadow: 5px 5px 12px rgb(109, 104, 104);
+    @include _883(){
+        text-align: center;
+    }
 }
 .hemohim_info{
     display: flex;
     margin-top: 50px;
     justify-content: center;
     justify-items: center;
-    width: 60%;
+    width: 90%;
     margin-bottom: 50px;
+    @include _500(){
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        
+    }
     &_body{
         display: flex;
         flex-direction: column;
@@ -61,6 +81,13 @@
     &_text{
         font-size: 14pt;
         margin-bottom: 20px;
+        width: 100%;
+        @include _883(){
+            font-size: 12pt;
+            text-align: justify;
+            align-self: center;
+            justify-self: center;
+        }
         &_selection{
             font-size: 14pt;
             font-weight: 700; 
@@ -72,9 +99,16 @@
     &_sertificate{
         display: flex;
         flex-direction: column;
+        @include _500(){
+            display: none;
+
+        }
     }
     &_subtitle{
         width: 60%;
         font-size: 8pt;
+        @include _500(){
+            text-align: start;
+        }
     }
 }

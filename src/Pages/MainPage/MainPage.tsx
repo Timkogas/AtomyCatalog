@@ -7,6 +7,7 @@ import koreanImg from '../../assets/korean_symbol.png'
 import Line from '../../Components/UI/Line/Line';
 import Portal from '../../Components/Portal/Portal';
 import ProductPage from '../ProductPage/ProductPage';
+import { useNavigate } from 'react-router';
 interface MainPageProps {
 
 }
@@ -21,6 +22,7 @@ const MainPage: React.FC<MainPageProps> = () => {
         id:0,
         body:''
     })
+    const navigate = useNavigate();
     const productOpen = (id:number,name:string,note:string,price:number,body:string) => {
         setProduct({name:name, note:note,price:price, body:body,id:id})
         setActiveModal('active_product')
@@ -46,7 +48,7 @@ const MainPage: React.FC<MainPageProps> = () => {
                 <p className={cls.text_info}>Зарегистрируйся в интернет-магазине АТОМИ, чтобы приобретать продукцию
                     по минимальной цене, пользоваться бесплатной доставкой и принимать участие
                     в мероприятиях и акциях от компании!</p>
-                <Button category='registry'>Регистрация в атоми</Button>
+                <Button onClick={()=>navigate('/registry')} category='registry'>Регистрация в атоми</Button>
             </div>
             <Line line2={true} />
             <div className={cls.info}>
