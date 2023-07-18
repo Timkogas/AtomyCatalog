@@ -12,7 +12,7 @@ type InputProps = {
 
 const Input: React.FC<InputProps> = ({category,mask, ...otherProps}) => {
     return (
-        <IMaskInput mask={mask} {...otherProps} className={category==='form'?cls.Input_form:cls.Input}  />
+        <IMaskInput  mask={mask} {...otherProps} className={category==='form'?cls.Input_form:cls.Input}  />
     );
 };
 

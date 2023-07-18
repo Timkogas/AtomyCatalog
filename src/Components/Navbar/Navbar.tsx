@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import cls from './Navbar.module.scss'
 import Input from '../UI/Input/Input';
-import Button from '../UI/Button/Button';
 import Atomy from '../../assets/atomy.png'
 import { NavLink, useNavigate } from 'react-router-dom';
 import Portal from '../Portal/Portal';
 import CartWindow from '../../Pages/CartWindow/CartWindow';
+import { useAppSelector } from '../../Redux/Redux-hooks/hooks';
+import CartProductContainer from '../CartProductContainer/CartProductContainer';
 interface NavbarProps {
 
 }
 
 const Navbar: React.FC<NavbarProps> = () => {
-
+  const products = useAppSelector(state=>state.products.products);
+  const [searched, setSearched] = useState<Array<any>>([]);
+  const [searchInput, setSearchInput] =useState('');
   const [activeModal, setActiveModal]=useState('inactive')
   const cartOpen = () => {
     setActiveModal('active_cart')
@@ -23,8 +26,12 @@ const cartClose = () =>{
         windowH:window.innerHeight,
         windowW:window.innerWidth
     })
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
+    const search = (e: React.ChangeEvent<HTMLInputElement>) =>{
+      setSearchInput(e.target.value)
+      setSearched(products.filter(el=>el.name.toLowerCase().includes(searchInput.toLowerCase())));
 
+    }
     const detectSize = () => {
         setWindowHW({
           windowW: window.innerWidth,
@@ -37,6 +44,7 @@ const cartClose = () =>{
           window.removeEventListener('resize', detectSize)
         }
       }, [windowHW])
+      console.log(searchInput)
     return (
         <>
             <nav className={cls.navbar}>
@@ -53,7 +61,7 @@ const cartClose = () =>{
                 <NavLink className={cls.NavLink} to='/foodndrinks'><li>Еда и напитки</li></NavLink>
                 <NavLink className={cls.NavLink} to='/clothes'><li>Одежда и другое</li></NavLink>
                 <NavLink className={cls.NavLink} to='/contacts'><li>Контакты</li></NavLink>
-                <li onClick={cartOpen}>Корзина</li>
+                <li className={cls.cart} onClick={cartOpen}>Корзина</li>
             </ul>:
                  <select className={cls.dropdown} name="dropdown" id="dropdown">
                     <option value="" onClick={()=>navigate('/')}>Главная</option>
@@ -65,13 +73,15 @@ const cartClose = () =>{
                     <option value="" onClick={()=>navigate('/foodndrinks')}>Еда и Напитки</option>
                     <option value="" onClick={()=>navigate('/clothes')}>Одежда и другое</option>
                     <option value="" onClick={()=>navigate('/contacts')}>Контакты</option>
-                    <option onClick={cartOpen} value="">Корзина</option>
+                    <option className={cls.cart} onClick={cartOpen} value="">Корзина</option>
                  </select>
             }
                </div>
                 <div className={cls.search}>
-                    <Input type='text' placeholder='Поиск по сайту' name='search' />
-                    <Button category='form'>Поиск</Button>
+                    <Input onChange={search} type='text' name='searchInput' value={searchInput} placeholder='Поиск по сайту'/>
+                    <Portal className='active_search'>
+                      {searched.length === 0? <span className={cls.pop}>Ничего не найдено</span>: searched.map(el=><CartProductContainer name={el.name} price={el.price} id={el.id} amount={el.amount}/>) }
+                    </Portal>
                 </div>
                 <Portal className={activeModal}>
                   <CartWindow onClick={cartClose} />

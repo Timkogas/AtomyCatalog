@@ -41,7 +41,7 @@ const CartWindow: React.FC<CartWindowProps> = ({onClick}) => {
         </div>
         <div className={cls.CartWindow}>
             <div className={cls.CartWindow_orders}>
-                {cart.length === 0 ? <span className={cls.empty}>Ваша корзина пуста.</span>: cart.map(el=>  <CartProductContainer remove={()=>dispatch(cartRemove(el.id))} name={el.name} price={el.price} amount={el.amount} id={el.id}/> ) }
+                {cart.length === 0 ? <span className={cls.empty}>Ваша корзина пуста.</span>: cart.map(el=>  <CartProductContainer remove={()=>dispatch(cartRemove(el.id))} inCart={true} name={el.name} price={el.price} amount={el.amount} id={el.id}/> ) }
             </div>
         </div>
         </>

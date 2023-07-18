@@ -16,27 +16,28 @@
     }
 }
 
-.Input{
-   height: 32px;
+.Input {
+    height: 40px;
     padding-left: 10px;
-    width: 37vh;
-    border-radius: 12px 0px 0px 12px;
-    border:2px solid rgb(26, 159, 183);
+    width: 50vh;
+    border-radius: 12px;
+    border: 2px solid rgb(26, 159, 183);
     outline: none;
     font-size: 12pt;
     overflow: hidden;
-    &_form{
-    height: 50px;
-    padding-left: 10px;
-    width: 450px;
-    border-radius: 12px;
-    border:2px solid rgb(26, 159, 183);
-    outline: none;
-    font-size: 14pt;
-    overflow: hidden;
-        @include _500(){
+
+    &_form {
+        height: 50px;
+        padding-left: 10px;
+        width: 450px;
+        border-radius: 12px;
+        border: 2px solid rgb(26, 159, 183);
+        outline: none;
+        font-size: 14pt;
+        overflow: hidden;
+
+        @include _500() {
             width: 300px;
         }
     }
 }
-

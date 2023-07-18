@@ -7,10 +7,11 @@ interface CartProductContainerProps {
     id:number,
     price:number,
     amount:number,
-    remove:()=>void
+    remove?:()=>void,
+    inCart?:boolean
 }
 
-const CartProductContainer: React.FC<CartProductContainerProps> = ({name,id,price,amount,remove}) => {
+const CartProductContainer: React.FC<CartProductContainerProps> = ({name,id,price,amount,remove, inCart}) => {
     return (
         <div className={cls.CartProductContainer}>
             <div className={cls.CartProductContainer_imgContainer}>
@@ -19,9 +20,9 @@ const CartProductContainer: React.FC<CartProductContainerProps> = ({name,id,pric
             <div className={cls.CartProductContainer_info}>
             <span className={cls.CartProductContainer_info_title}>{name}</span>
             <span className={cls.CartProductContainer_info_article}>Артикул: {id}</span>
-            <span className={cls.CartProductContainer_info_sumprice}>Цена: {price*amount} р {`(${price}р x ${amount}шт)`}</span>
+            <span className={cls.CartProductContainer_info_sumprice}>{inCart === true? `Цена: ${price*amount} р ${`(${price}р x ${amount}шт)`}`: `Цена: ${price}`}</span>
             </div>
-            <Button onClick={remove} category='buy'>Удалить</Button>
+            {inCart === true? <Button onClick={remove} category='buy'>Удалить</Button>:null}
         </div>
     );
 };

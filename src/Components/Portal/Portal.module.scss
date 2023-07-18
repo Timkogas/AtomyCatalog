@@ -48,3 +48,19 @@
         width: 300px;
     }
 }
+.active_search{
+    background-color: white;
+    border: 2px solid rgb(26, 159, 183);
+    border-radius: 12px;
+    position: absolute;
+    top:180px;
+    right:515px;
+    width:50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    max-height: 400px;
+    float: center;
+    padding: 20px;
+}

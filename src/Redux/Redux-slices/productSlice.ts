@@ -20,30 +20,30 @@ interface ProductState {
 const initialState: ProductState = {
     products: [
         {   id:111111,
-            name: 'Atomy Toothpast',
+            name: 'Atomy Gualurone',
             body:"Поверхносто-активные вещества растительного происхождения и 7 видов энзимов для удаления сложных загрязнений и следов от кофе, еды, косметики и т.п.",
             korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
         },
         {   
             id:111112,
-            name: 'Atomy Toothpast',
+            name: 'Atomy Gvaht',
             body:"Поверхносто-активные вещества растительного происхождения и 7 видов энзимов для удаления сложных загрязнений и следов от кофе, еды, косметики и т.п.",
             korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
         },
         {   id:111113,
-            name: 'Atomy Toothpast',
+            name: 'Atomy Cooler',
             body:"Поверхносто-активные вещества растительного происхождения и 7 видов энзимов для удаления сложных загрязнений и следов от кофе, еды, косметики и т.п.",
             korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
         },
         {   
             id:111114,
-            name: 'Atomy Toothpast',
+            name: 'Atomy Pants',
             body:"Поверхносто-активные вещества растительного происхождения и 7 видов энзимов для удаления сложных загрязнений и следов от кофе, еды, косметики и т.п.",
             korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
         },
         {   
             id:111115,
-            name: 'Atomy Toothpast',
+            name: 'Atomy Cooler',
             body:"Поверхносто-активные вещества растительного происхождения и 7 видов энзимов для удаления сложных загрязнений и следов от кофе, еды, косметики и т.п.",
             korean: false, new: false, price: 1100, note: '200гр x 5шт', category: 'Одежда и другое', hemohim: false
         },

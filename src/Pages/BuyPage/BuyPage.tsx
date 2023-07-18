@@ -124,7 +124,7 @@ const BuyPage: React.FC<BuyPageProps> = () => {
                     <span className={cls.cart_info_title}>Ваши заказы :</span>
                     <span className={cls.cart_info_title}>{summary}р</span>
                 </div>
-                {cart.map(el => <CartProductContainer price={el.price} name={el.name} amount={el.amount} id={el.id} remove={() => dispatch(cartRemove(el.id))} />)}
+                {cart.map(el => <CartProductContainer inCart={true} price={el.price} name={el.name} amount={el.amount} id={el.id} remove={() => dispatch(cartRemove(el.id))} />)}
             </div>
             <Line line2={false} />
         </div>

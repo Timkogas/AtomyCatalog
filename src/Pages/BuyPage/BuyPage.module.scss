@@ -57,7 +57,7 @@
     border: 2px solid rgb(26, 159, 183);
     border-radius: 12px;
     height: 500px;
-    overflow: scroll;
+    overflow-y: scroll;
     &_title{
         font-size: 14pt;
         letter-spacing: 2px;
